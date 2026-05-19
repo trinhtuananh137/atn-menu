@@ -1,0 +1,358 @@
+:root {
+  --primary-green: #2e6b3e;
+  --secondary-red: #d32f2f;
+  --bg-light: #f7f9f6;
+  --text-dark: #2c3e50;
+  --accent-yellow: #ffd700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  padding-bottom: 80px;
+}
+
+/* Header & Logo */
+.header {
+  background: linear-gradient(135deg, #e8f5e9, #ffebee);
+  text-align: center;
+  padding: 25px 15px;
+  border-bottom: 4px solid var(--primary-green);
+  position: relative;
+}
+
+.logo-container {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 10px auto;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #2e6b3e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 11px;
+  border: 2px dashed #ffd700;
+}
+
+.logo-placeholder i {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.header h1 {
+  color: var(--primary-green);
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.header h2 {
+  color: var(--secondary-red);
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+.hotline {
+  background-color: var(--primary-green);
+  color: white;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 25px;
+  margin-top: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(46, 107, 62, 0.3);
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  display: flex;
+  overflow-x: auto;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+  scrollbar-width: none;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab {
+  padding: 15px 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.nav-tab.active {
+  color: var(--primary-green);
+  border-bottom-color: var(--primary-green);
+  font-size: 15px;
+}
+
+/* Note Banner */
+.upsize-banner {
+  background: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 12px;
+  margin: 15px 12px 5px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #856404;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Section Menu */
+.menu-section {
+  padding: 15px 12px;
+  scroll-margin-top: 50px;
+}
+
+.section-title {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-title.an-vat {
+  background-color: var(--secondary-red);
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #edf2f7;
+}
+
+/* Image Box Placeholder */
+.item-image-box {
+  width: 118px;
+  height: 260px;
+  border-radius: 8px; /* Nếu muốn bo góc ảnh */
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a4b0be;
+  font-size: 11px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #edf2f7;
+  position: relative;
+  background-size: cover;
+  background-image: url("menu.png"); /* Đường dẫn đến ảnh menu to */
+  background-repeat: no-repeat;
+  /* QUAN TRỌNG: Định vị chiều rộng cho ảnh gốc (ví dụ ảnh gốc của bạn rộng 1000px).
+       Bạn phải cố định một con số width ở đây để tọa độ bên dưới không bị lệch khi responsive.
+    */
+  background-size: 1992px auto;
+}
+
+.item-image-box-big-rectangle {
+  width: 299px;
+  height: 299px;
+  border-radius: 8px; /* Nếu muốn bo góc ảnh */
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a4b0be;
+  font-size: 11px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #edf2f7;
+  position: relative;
+  background-size: cover;
+  background-image: url("menu.png"); /* Đường dẫn đến ảnh menu to */
+  background-repeat: no-repeat;
+  /* QUAN TRỌNG: Định vị chiều rộng cho ảnh gốc (ví dụ ảnh gốc của bạn rộng 1000px).
+       Bạn phải cố định một con số width ở đây để tọa độ bên dưới không bị lệch khi responsive.
+    */
+  background-size: 1992px auto;
+}
+
+.item-image-box-small-rectangle {
+  width: 193px;
+  height: 193px;
+  border-radius: 8px; /* Nếu muốn bo góc ảnh */
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a4b0be;
+  font-size: 11px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #edf2f7;
+  position: relative;
+  background-size: cover;
+  background-image: url("menu.png"); /* Đường dẫn đến ảnh menu to */
+  background-repeat: no-repeat;
+  /* QUAN TRỌNG: Định vị chiều rộng cho ảnh gốc (ví dụ ảnh gốc của bạn rộng 1000px).
+       Bạn phải cố định một con số width ở đây để tọa độ bên dưới không bị lệch khi responsive.
+    */
+  background-size: 1992px auto;
+}
+
+.item-image-box i {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #ced6e0;
+}
+
+.item-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.item-info h4 {
+  font-size: 14px;
+  color: #1e272e;
+  margin-bottom: 4px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.item-info p {
+  font-size: 11px;
+  color: #747d8c;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.item-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.item-price {
+  color: var(--secondary-red);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.btn-add {
+  background-color: #f1f2f6;
+  color: var(--primary-green);
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Thống nhất hàng cho Combo */
+.full-width {
+  grid-column: span 2;
+  flex-direction: row;
+}
+
+.full-width .item-image-box {
+  width: 110px;
+  height: 100%;
+  border-bottom: none;
+  border-right: 1px solid #edf2f7;
+}
+
+.badge-hot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--accent-yellow);
+  color: #000;
+  font-size: 9px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-text {
+  text-align: center;
+  padding: 30px 20px;
+  color: #a4b0be;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Hướng dẫn thay ảnh cho chủ quán ẩn */
+.admin-note {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  color: #0d47a1;
+  padding: 10px;
+  margin: 15px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+}
