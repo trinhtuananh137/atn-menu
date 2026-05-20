@@ -45,8 +45,6 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #2e6b3e;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,6 +52,10 @@ body {
   font-weight: bold;
   font-size: 11px;
   border: 2px dashed #ffd700;
+  background-image: url('logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .logo-placeholder i {
@@ -230,6 +232,30 @@ body {
   background-size: 1992px auto;
 }
 
+.item-image-box-combo-rectangle {
+  width: 287px;
+  height: 353px;
+  border-radius: 8px; /* Nếu muốn bo góc ảnh */
+  background-color: #f1f2f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #a4b0be;
+  font-size: 11px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #edf2f7;
+  position: relative;
+  background-size: cover;
+  background-image: url("menu.png"); /* Đường dẫn đến ảnh menu to */
+  background-repeat: no-repeat;
+  /* QUAN TRỌNG: Định vị chiều rộng cho ảnh gốc (ví dụ ảnh gốc của bạn rộng 1000px).
+       Bạn phải cố định một con số width ở đây để tọa độ bên dưới không bị lệch khi responsive.
+    */
+  background-size: 1992px auto;
+}
+
 .item-image-box-small-rectangle {
   width: 193px;
   height: 193px;
@@ -344,15 +370,4 @@ body {
   color: #a4b0be;
   font-size: 12px;
   line-height: 1.6;
-}
-
-/* Hướng dẫn thay ảnh cho chủ quán ẩn */
-.admin-note {
-  background: #e3f2fd;
-  border: 1px solid #90caf9;
-  color: #0d47a1;
-  padding: 10px;
-  margin: 15px 12px;
-  border-radius: 5px;
-  font-size: 12px;
 }
